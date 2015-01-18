@@ -1,0 +1,16 @@
+<h1 class="loginHead">Login</h1>
+
+<%= form_for :user do |f| %>
+<form>
+	<div class="col-md-2">
+		<div class="form-group">
+		<strong>Email: </strong>
+			<%= f.text_field :email, class: "form-control", placeholder: "Enter email" %><br>
+			
+			<strong>Password: </strong> 
+			<%= f.password_field :password, class: "form-control", placeholder: "Password" %><br>
+		</div>
+			<%= f.submit "Login", class: "btn btn-primary" %>
+	</div>
+</form>
+<% end %>

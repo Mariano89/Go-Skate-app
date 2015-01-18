@@ -1,0 +1,24 @@
+<h1 class="signupHead"> Sign up </h1>
+
+<%= form_for @user do |f| %>
+<form>
+
+	<div class="col-md-2">
+		<div class="form-group">
+
+			<strong>First Name: </strong>
+			 <%= f.text_field :first_name, class: "form-control", placeholder: "Enter first name" %><br>
+			<strong>Last Name: </strong>
+			 <%= f.text_field :last_name, class: "form-control", placeholder: "Enter last name" %><br>
+			<strong>Email: </strong>
+			 <%= f.text_field :email, class: "form-control", placeholder: "E-mail" %><br>
+			<strong>Password: </strong>
+			 <%= f.password_field :password, class: "form-control", placeholder: "Password" %><br>
+			<strong>Confirm password: </strong>
+			 <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm password" %><br>
+			</div>
+			<%= f.submit "Signup", class: "btn btn-primary" %>
+	</div>
+
+</form>
+	<% end %>
