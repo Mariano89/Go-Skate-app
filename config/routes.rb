@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root to: "application#home"
+  root to: "users#new"
 
   get '/signup' => 'users#new'
 
@@ -8,12 +8,8 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy', as: :logout
 
-  get 'users/create_session' => 'createsessions#new'
 
-  # get 'users/join_sessions' => 'joinsessions#new'
-  
+  resources :skate_sessions
   resources :users
-  resources :create_sessions
-  # resources :join_sessions
 
 end

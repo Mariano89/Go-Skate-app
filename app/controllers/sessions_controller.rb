@@ -8,10 +8,13 @@ class SessionsController < ApplicationController
 
 		if user && user.authenticate(params[:user][:password])
 			session[:user_id] = user.id
+			flash[:success] = "You logged in successfully!"
 			redirect_to user_path(user.id)
 		else
+			flash.now[:danger] = "Username or password incorrect."
 			render :new
 		end
+		
 	end
 
 	def destroy

@@ -1,5 +1,6 @@
 <h1 class="signupHead"> Sign up </h1>
 
+
 <%= form_for @user do |f| %>
 <form>
 
@@ -10,6 +11,8 @@
 			 <%= f.text_field :first_name, class: "form-control", placeholder: "Enter first name" %><br>
 			<strong>Last Name: </strong>
 			 <%= f.text_field :last_name, class: "form-control", placeholder: "Enter last name" %><br>
+			 	<strong>Username: </strong>
+			 <%= f.text_field :username, class: "form-control", placeholder: "Enter username" %><br>
 			<strong>Email: </strong>
 			 <%= f.text_field :email, class: "form-control", placeholder: "E-mail" %><br>
 			<strong>Password: </strong>

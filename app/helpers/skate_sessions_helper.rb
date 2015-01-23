@@ -1,0 +1,2 @@
+module SkateSessionsHelper
+end

@@ -1,4 +1,18 @@
-<h2>Welcome <%= current_user.first_name + " " + current_user.last_name %></h2>
+<h2 class="text-center">Welcome <%= current_user.first_name + " " + current_user.last_name %></h2>
 
-<p><%= link_to 'Create a Session', create_session_path %>
-<p><%= link_to 'Join a Session'  %>
+<div class="text-center">
+
+<%= link_to 'Create a Session', new_skate_session_path %> |
+<%= link_to 'Join a Session', "/skate_sessions?current=true" %> |
+<%= link_to 'Current Session', edit_skate_session_path %> |
+<%= link_to 'View Past Sessions' %>
+
+</div>
+<hr>
+
+
+<%# @skate_session.each do |i| %>
+	<%#= i.spot %><br>
+	<%#= image_tag i.photo.url(:medium) %>
+<%# end %>
+

@@ -21,9 +21,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# default rails console
-gem 'pry-rails', :group => :development
-
 # install bootstrap gem
 gem 'bootstrap-sass', '~> 3.3.1'
 # install mongoid gem
@@ -36,6 +33,19 @@ gem "paperclip", "~> 4.2"
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+
+## CARRIERWAVE GEMS ####
+gem 'carrierwave'
+
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+
+gem 'fog'   # required for Amazon S3
+
+gem 'mini_magick' #for post-upload image processing
+
+gem 'figaro'
+####### end carrierwave gems#####
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -59,5 +69,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'faker'
   gem 'pry-rails'
+end
+  group :development do
+  gem "better_errors"
 end
 
