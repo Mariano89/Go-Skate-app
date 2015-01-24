@@ -7,6 +7,8 @@ class User
   field :username, type: String
   field :email, type: String
   field :password_digest, type: String
+  has_many :child_sites, :class_name => "User", :inverse_of => :parent_site
+  belongs_to :parent_site, :class_name => "User", :inverse_of => :child_sites
 
   has_secure_password
 

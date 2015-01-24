@@ -44,7 +44,7 @@ development:
 
     # Raise an error when performing a #find and the document is not found.
     # (default: true)
-    # raise_not_found_error: true
+    raise_not_found_error: false
 
     # Raise an error when defining a scope with the same name as an
     # existing method. (default: false)
@@ -107,6 +107,4 @@ production:
         # pool_size default size is 5 connections.
         # If you're running a lot of threads, you may consider increasing pool_size
         # to the number of threads you're running e.g.
-        # poolsize: <%= ENV['NUM_THREADS'] %>
-
-
+        # poolsize: <%= ENV['NUM_THREADS'] %>     
