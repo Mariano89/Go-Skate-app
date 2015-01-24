@@ -20,7 +20,7 @@
 	</div>
 	<div class="row">
 		<% @skate_session.photos.each do |p| %>
-			<div class="col-md-3"><%= image_tag p.photo.url(:medium) %><br> <%= p.caption %></div>
+			<div class="col-md-3"><a href="/"><%= image_tag p.photo.url(:medium) %></a><br> <%= p.caption %></div>
 			<!-- link_to "/skate_sessions/:skate_session_id/photos/:id/edit", -->
 		<% end %>
 	</div>
