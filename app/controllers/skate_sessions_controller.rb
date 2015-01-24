@@ -1,16 +1,20 @@
 class SkateSessionsController < ApplicationController
 	def index
-		if params[:current] = true
-			@skate_sessions = SkateSession.where(date_created: Time.now)
-		elsif params[:current] = false
+		if params[:current]
+			@skate_sessions = SkateSession.where(:created_at.gt => DateTime.now.beginning_of_day)
 
+		elsif params[:old]
+			@skate_sessions = SkateSession.where(:created_at.lt => DateTime.now.beginning_of_day)
+		else
+			@skate_sessions = SkateSession.all
 		end
-			@skate_sessions = SkateSession.all.order(created_at: :desc)
-			@skate_session = SkateSession.new
+
 	end
 
-# 	def show
-# 		@skate_session = SkateSession.find(params[:id])
+ 	def show
+ 		@skate_session = SkateSession.find(params[:id])
+ 		@photo = @skate_session.photos.new
+	end
 
 	def new
 		@skate_session = SkateSession.new
@@ -29,26 +33,22 @@ class SkateSessionsController < ApplicationController
 		end
 	end
 
-# 	def edit
-# 		@skate_session = SkateSession.find(params[:id])
-# 	end
+	def edit
+		@skate_session = SkateSession.find(params[:id])
+	end
 
-# 	def update
-# 		@skate_session = SkateSession.find(params[:id])
+	def update
+		@skate_session = SkateSession.find(params[:id])
 
-# 		if @skate_session.update(skate_session_params)
-# 			redirect_to skate_sessions_path
-# 		else
-# 			render :edit
-# 		end
-# 	end
-# end
+		if @skate_session.update(skate_session_params)
+			redirect_to skate_sessions_path
+		else
+			render :edit
+		end
+	
+end
 	def skate_session_params
 		params.require(:skate_session).permit(:spot, :photo)
 	end
-
-	# def modify_skate_session_params
-	# 	params.require(:modify_skate_session).permit(:spot, :photo)
-	# end
 
 end

@@ -1,6 +1,6 @@
 <h1 class="text-center">Create a Session</h1>
 <hr>
-
+<div class="row" >
 <%= form_for @skate_session do |f| %>
 	<div class="col-md-2">
 		<div class='form-group'>
@@ -8,14 +8,9 @@
 			<%= f.text_field :spot, class: "form-control" %>
 		</div>
 		
-	<!-- 	<div class="form-group">
-			<%#= f.file_field :photo %>
-		</div> -->
 		<div>
 		<%= f.submit "Create a Session", class: "btn btn-primary" %>
 		</div>
 	</div>
 
 <% end %>
-
-

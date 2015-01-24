@@ -1,0 +1,28 @@
+<div class="row">
+
+	<h1 class="col-md-12 text-center"><%= :spot %></h1>
+
+</div>
+<hr>
+
+<div class="row">
+	<div class="col-md-2">
+		<div class="borderRT">
+			<div class="form-group">
+				<%= form_for [@skate_session, @photo] do |f| %>
+					<%= f.file_field :photo %><br>
+					<strong>Caption</strong> <br>
+					<%= f.text_field :caption, placeholder: "Enter caption" %><br>
+					<%= f.submit "Submit", class: "btn btn-primary" %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<% @skate_session.photos.each do |p| %>
+			<div class="col-md-3"><%= image_tag p.photo.url(:medium) %><br> <%= p.caption %></div>
+			
+		<% end %>
+	</div>
+</div>
+	

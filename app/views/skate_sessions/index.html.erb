@@ -4,14 +4,10 @@
 <% @skate_sessions.each do |i| %>
 	<ul>
 		<li>
-		<%= link_to i.spot, "/skate_sessions/:id/edit" %>
-		<p>should i add an edit button here to upload files to session?..</p>
-		<!-- <small><%#= skate_session.date_published %></small> -->
+		<h3><%= link_to i.spot, skate_session_path(i) %></h3>
+		
 		</li>
 	</ul>
 	<br>
-	<%#= image_tag i.photo.url(:medium) %>
+
 <% end %>
-
-
-	<%#= link

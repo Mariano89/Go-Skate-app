@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy', as: :logout
 
 
-  resources :skate_sessions
+  resources :skate_sessions do
+  	resources :photos
+  end
   resources :users
 
 end

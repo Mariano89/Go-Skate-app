@@ -70,7 +70,5 @@ group :development, :test do
   gem 'faker'
   gem 'pry-rails'
 end
-  group :development do
-  gem "better_errors"
-end
+
 
