@@ -8,12 +8,12 @@ class SkateSessionsController < ApplicationController
 		else
 			@skate_sessions = SkateSession.all
 		end
-
 	end
 
  	def show
  		@skate_session = SkateSession.find(params[:id])
  		@photo = @skate_session.photos.new
+ 		@video = @skate_session.videos.new
 	end
 
 	def new

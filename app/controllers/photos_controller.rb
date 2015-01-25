@@ -1,5 +1,9 @@
 class PhotosController < ApplicationController
 
+	def index
+		@photo = Photo.all
+	end
+
 	def new
 		@photo = Photo.new
 	end
@@ -22,9 +26,17 @@ class PhotosController < ApplicationController
 
 	def edit
  		@photo = Photo.find(params[:id])
+
+ 		if @photo.update(photo_params)
+			redirect_to edit_skate_session_photo_path
+		else
+			render :edit
+		end
  	end
 
  	def update
+ 		@photo = Photo.find(params[:id])
+
  		if @photo.update(photo_params)
 			redirect_to edit_skate_session_photo_path
 		else
@@ -32,7 +44,14 @@ class PhotosController < ApplicationController
 		end
 	end
 
+		private
+
 	def photo_params
 		params.require(:photo).permit(:photo, :caption)
 	end
+
+	# def photo_id_params
+	# 	params.require(:photo_id).permit(:photo, :photo_id, :caption)
+	# end
 end
+

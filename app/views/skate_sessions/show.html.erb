@@ -1,8 +1,7 @@
-
-<h1 class="text-center"><%= :spot %></h1>
-	<div class="text-center">
+<div class="text-center">
+	<h1><%= @skate_session.spot %></h1>
 	<%= link_to 'Back to sessions', "/skate_sessions?current=true" %> 
-	</div>
+</div>
 <hr>
 
 <div class="lt-sidebar">
@@ -13,12 +12,34 @@
 			<div class="form-group">
 
 				<%= form_for [@skate_session, @photo] do |f| %>
-					<%= f.file_field :photo %><br>
-					<strong>Caption</strong> <br>
+					<strong>Upload photo here</strong>
+					<br>
+					<br>
+					<%= f.file_field :photo %>
+					<br>
+					<strong>Caption</strong> 
+					<br>
 					<%= f.text_field :caption, placeholder: "Enter caption" %>
 					<br>
 					<br>
 					<%= f.submit "Submit", class: "btn btn-primary" %>
+
+				<% end %>
+
+				<br>
+
+				<%= form_for [@skate_session, @video] do |v| %>
+					<strong>Upload video here</strong>
+					<br>
+					<br>
+					<%= v.file_field :video %>
+					<br>
+					<strong>Caption</strong> 
+					<br>
+					<%= v.text_field :caption, placeholder: "Enter caption" %>
+					<br>
+					<br>
+					<%= v.submit "Submit", class: "btn btn-primary" %>
 
 				<% end %>
 
@@ -33,7 +54,15 @@
 			<br>
 			 <%= p.caption %>
 			</div>
-			
+
+		<% end %>
+
+		<% @skate_session.videos.each do |x| %>
+			<div class="col-md-3">  <%= video_tag x.video.url(:medium) %>
+			<br>
+			 <%= x.caption %>
+			</div>
+
 		<% end %>
 
 	</div>
