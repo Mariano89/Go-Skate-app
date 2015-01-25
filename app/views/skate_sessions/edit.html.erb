@@ -1,2 +1,11 @@
-<h1>hi</h1>
+<h1>name of photo?</h1>
 
+<% @skate_session.photos.each do |p| %>
+
+	<div class="col-md-3">
+		<a href="/skate_sessions/:skate_session_id/photos/:id/edit"><%= image_tag p.photo.url(:large) %> </a>
+		<br>
+		<%= p.caption %>
+	</div>
+
+<% end %>

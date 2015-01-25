@@ -45,8 +45,8 @@ class SkateSessionsController < ApplicationController
 		else
 			render :edit
 		end
-	
 end
+
 	def skate_session_params
 		params.require(:skate_session).permit(:spot, :photo)
 	end
