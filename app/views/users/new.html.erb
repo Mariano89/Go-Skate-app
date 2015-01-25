@@ -1,4 +1,20 @@
-<h1 class="signupHead"> Sign up </h1>
+<h1 class="text-center"> Sign up </h1>
+<hr>
+
+	<div class="col-md-2">
+	</div>
+
+<div class="col-md-7">
+	<div class="text-left">
+		<h2>Welcome to Go Skate</h2>
+			<strong>
+			<p>A place where you can post content of your skate sessions with your friends</p>
+			<p>Upload photos and videos of your daily sessions</p>
+			<p>Find out where your friends are skating</p>
+			</strong>
+	</div>
+</div>
+
 
 
 <%= form_for @user do |f| %>
@@ -20,8 +36,11 @@
 			<strong>Confirm password: </strong>
 			 <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm password" %><br>
 			</div>
-			<%= f.submit "Signup", class: "btn btn-primary" %>
+				<%= f.submit "Signup", class: "btn btn-primary" %>
 	</div>
 
 </form>
 	<% end %>
+
+<div class="col-md-1">
+</div>

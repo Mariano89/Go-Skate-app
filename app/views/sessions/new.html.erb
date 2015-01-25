@@ -1,5 +1,8 @@
-<h1 class="loginHead">Login</h1>
+<h1 class="text-center">Login</h1>
+<hr>
 
+<div class="col-md-5">
+</div>
 
 <%= form_for :user do |f| %>
 <form>
@@ -10,8 +13,15 @@
 			
 			<strong>Password: </strong> 
 			<%= f.password_field :password, class: "form-control", placeholder: "Password" %><br>
+
+			<%= link_to 'forgot password?', "/"%>
+
 		</div>
 			<%= f.submit "Login", class: "btn btn-primary" %>
 	</div>
 </form>
 <% end %>
+
+<div class="col-md-5">
+</div>
+
