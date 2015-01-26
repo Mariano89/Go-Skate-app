@@ -17,7 +17,7 @@ class VideosController < ApplicationController
 		@video = @skate_session.videos.new(video_params)
 
 		if @video.save
-
+			flash[:info] = "Video was uploaded successfully" 
 			redirect_to @skate_session
 		else
 			render :new

@@ -58,7 +58,9 @@
 		<% end %>
 
 		<% @skate_session.videos.each do |x| %>
-			<div class="col-md-3">  <%= video_tag x.video.url :controls =>true %>
+			<div class="col-md-3">  
+			<!-- Posted by: -->
+			<%= video_tag x.video.url :controls => true %>
 			<br>
 			 <%= x.caption %>
 			</div>

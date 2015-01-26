@@ -17,7 +17,7 @@ class PhotosController < ApplicationController
 		@photo = @skate_session.photos.new(photo_params)
 
 		if @photo.save
-
+			flash[:info] = "Photo was uploaded successfully"
 			redirect_to @skate_session
 		else
 			render :new
