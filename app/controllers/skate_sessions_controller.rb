@@ -45,10 +45,10 @@ class SkateSessionsController < ApplicationController
 		else
 			render :edit
 		end
-end
+	end
 
 	def skate_session_params
-		params.require(:skate_session).permit(:spot, :photo)
+		params.require(:skate_session).permit(:spot, :photo, :video)
 	end
 
 end

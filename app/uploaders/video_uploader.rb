@@ -1,14 +1,14 @@
 # encoding: utf-8
 
 class VideoUploader < CarrierWave::Uploader::Base
-
+  # include CarrierWave::Video
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  # storage :file
-  storage :fog
+  storage :file
+  # storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -32,12 +32,13 @@ class VideoUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
+ 
+    ## *** converts display size *** ##
   version :medium do
     process :resize_to_fit => [250, 250]
   end
-
-  version :large do
-    process :resize_to_fit => [600, 600]
+  # version :medium do 
+    process encode_video: [:mp4, callbacks: { after_transcode: :set_success } ]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
@@ -52,4 +53,3 @@ class VideoUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
-end

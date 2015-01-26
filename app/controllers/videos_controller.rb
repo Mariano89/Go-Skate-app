@@ -24,6 +24,10 @@ class VideosController < ApplicationController
 		end
 	end
 
+  # def set_success(format, opts)
+  #   self.success = true
+  # end
+
 		private
 
 	def video_params
@@ -31,3 +35,6 @@ class VideosController < ApplicationController
 	end
 
 end
+
+
+

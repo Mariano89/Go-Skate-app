@@ -12,15 +12,17 @@
 			<div class="form-group">
 
 				<%= form_for [@skate_session, @photo] do |f| %>
-					<strong>Upload photo here</strong>
+					<%= f.label :photo, "Upload photo here" %>
 					<br>
+					<%= f.file_field :photo, class: "form-control" %>
 					<br>
-					<%= f.file_field :photo %>
+					<%= f.label :remote_image_url, "or image URL" %>
 					<br>
-					<strong>Caption</strong> 
+					<%= f.text_field :remote_image_url, class: "form-control", placeholder: "image URL" %>
 					<br>
-					<%= f.text_field :caption, placeholder: "Enter caption" %>
+					<%= f.label :caption, "Enter a caption" %>
 					<br>
+					<%= f.text_field :caption, class: "form-control", placeholder: "Enter caption" %>
 					<br>
 					<%= f.submit "Submit", class: "btn btn-primary" %>
 
@@ -29,15 +31,13 @@
 				<br>
 
 				<%= form_for [@skate_session, @video] do |v| %>
-					<strong>Upload video here</strong>
+					<%= v.label :video, "Upload video here" %>
 					<br>
+					<%= v.file_field :video, class: "form-control" %>
 					<br>
-					<%= v.file_field :video %>
+					<%= v.label :caption, "Enter a caption" %>
 					<br>
-					<strong>Caption</strong> 
-					<br>
-					<%= v.text_field :caption, placeholder: "Enter caption" %>
-					<br>
+					<%= v.text_field :caption, class: "form-control", placeholder: "Enter caption" %>
 					<br>
 					<%= v.submit "Submit", class: "btn btn-primary" %>
 
@@ -58,7 +58,7 @@
 		<% end %>
 
 		<% @skate_session.videos.each do |x| %>
-			<div class="col-md-3">  <%= video_tag x.video.url(:medium) %>
+			<div class="col-md-3">  <%= video_tag x.video.url :controls =>true %>
 			<br>
 			 <%= x.caption %>
 			</div>
