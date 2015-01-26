@@ -2,11 +2,11 @@ body {
 	background: #D3D3D3;
 }
 
-.text-right {
+.text-right {      // <-- ** MOVES NAV LINKS TO RIGHT
 	margin-right: 10px;
 }
 
-.lt-sidebar {
+.lt-sidebar {      // <-- ** CONTENT UPLOAD AREA ***
 	margin-left: 10px;
 }
 
@@ -19,6 +19,6 @@ body {
 	margin-left: 70px;
 }
 
-.logged {
+.logged {  
 	color: white;
 }

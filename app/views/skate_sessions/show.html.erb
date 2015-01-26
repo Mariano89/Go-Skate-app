@@ -1,8 +1,12 @@
+<!-- ** SELECTED SPOT PAGE ** -->
+
 <div class="text-center">
 	<h1><%= @skate_session.spot %></h1>
 	<%= link_to 'Back to sessions', "/skate_sessions?current=true" %> 
 </div>
 <hr>
+
+ 			<!-- **** UPLOAD CONTENT AREA **** -->
 
 <div class="lt-sidebar">
 
@@ -10,6 +14,8 @@
 	<div class="col-md-2">
 		<div class="borderRT">
 			<div class="form-group">
+
+					<!-- ** UPLOAD PHOTOS ** -->
 
 				<%= form_for [@skate_session, @photo] do |f| %>
 					<%= f.label :photo, "Upload photo here" %>
@@ -30,6 +36,8 @@
 
 				<br>
 
+					<!-- ** UPLOAD VIDEOS **-->
+
 				<%= form_for [@skate_session, @video] do |v| %>
 					<%= v.label :video, "Upload video here" %>
 					<br>
@@ -47,11 +55,13 @@
 		</div>
 	</div>
 
+			<!-- **** SHOW UPLOADED CONTENT AREA **** -->
+
 	<div class="row">
 
 		<% @skate_session.photos.each do |p| %>
-			<div class="col-md-3"> <a href="/skate_sessions/:skate_session_id/photos/:id/edit"> <%= image_tag p.photo.url(:medium) %> </a>
-			<br>
+			<div class="col-md-3"> <a href="/skate_sessions/:skate_session_id/photos/:id"> <%= image_tag p.photo.url(:medium) %> </a>
+			<br> 
 			 <%= p.caption %>
 			</div>
 

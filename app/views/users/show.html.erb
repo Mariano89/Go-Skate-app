@@ -1,13 +1,20 @@
-<h1 class="text-center">Welcome <%= current_user.first_name + " " + current_user.last_name %></h1>
+<!-- ** USER HOME PAGE **-->
+
+<h1 class="text-center">
+	Welcome <%= current_user.first_name + " " + current_user.last_name %>
+</h1>
 
 <div class="text-center">
 
-<%= link_to 'Create a Session', new_skate_session_path %> |
-<%= link_to 'Join a Session', "/skate_sessions?current=true" %> |
-<%= link_to 'View All Sessions', "/skate_sessions" %> 
-
-<%#= link_to 'Current Session', skate_session_path() %> 
-
+	<%= link_to 'Create a Session', new_skate_session_path %> |
+	<%= link_to 'Join a Session', "/skate_sessions?current=true" %> |
+	<%= link_to 'View All Sessions', "/skate_sessions" %> 
 
 </div>
 <hr>
+
+
+<br>
+<br>
+<br>
+<h2 class="text-center">User profile coming soon...</h2>
