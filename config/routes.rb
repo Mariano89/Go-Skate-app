@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root to: "users#new"
+  root to: "users#new"    # <-- switch to signup page
 
   get '/signup' => 'users#new'
 
