@@ -14,39 +14,30 @@
     <nav class="navbar navbar-inverse">
 
     <% if current_user %>  
-
+      <strong>
+       <h4 class="navbar-text">
+         Logged in as <%= current_user.first_name %>
+       </h4>
+      </strong>  <!-- wtf? if comment out, sessions nav goes bold -->
       <div class="text-right">
-        <div class="logged">
-      	 
-            <p class="navbar-text">
-              Logged in as <%= current_user.first_name %>
-            </p>
-            <br> <!-- might not need this break after adding button -->
-          
-        <strong> 
-          
-          <%= link_to 'Home', user_path(current_user.id) %> 
-        
-        </strong> | 
-        <strong> 
+       
+        <%= link_to('Home', user_path(current_user.id), class: "btn btn-default navbar-btn") %> 
          
-          <%= link_to 'Logout', logout_path %> 
-        
-        </strong> 
-      </div>
+        <%= link_to('Logout', logout_path, class: "btn btn-default navbar-btn") %> 
+
     </div>
 
     <% else %>
 
     	<div class="text-right">
 
-          <%= link_to("Login", login_path, class: "btn btn-default navbar-btn") %>
+        <%= link_to("Login", login_path, class: "btn btn-default navbar-btn") %>
 
-          <%= link_to("Signup", signup_path, class: "btn btn-default navbar-btn") %>
+        <%= link_to("Signup", signup_path, class: "btn btn-default navbar-btn") %>
           
     	</div>
 
-    	<% end %>
+    <% end %>
 
     </nav>
 
@@ -55,7 +46,6 @@
           <%= value %>
         </div>
       <% end %>
-
 
     <%= yield %>
 
