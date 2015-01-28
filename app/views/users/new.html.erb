@@ -1,22 +1,23 @@
 <!-- ** SIGN UP PAGE, REDIRECTS TO LOGIN PAGE ** -->
-
+<!-- 
 <h1 class="text-center"> Sign up </h1>
-<hr>
-
+<hr> -->
+<body class="bg">
 	<div class="col-md-2">
 	</div>
 
 <div class="col-md-7">
 	<div class="text-left">
-		<h2>Welcome to Go Skate</h2>
-			<strong>
-			<p>A place where you can post content of your skate sessions with your friends</p>
-			<p>Upload photos and videos of your daily sessions</p>
-			<p>Find out where your friends are skating</p>
-			</strong>
+		<div class="intro">
+			<h2>Welcome to Go Skate</h2>
+				<strong>
+				<p>A place where you can post content of your skate sessions with your friends</p>
+				<p>Upload photos and videos of your daily sessions</p>
+				<p>Find out where your friends are skating</p>
+				</strong>
+		</div>
 	</div>
 </div>
-
 <%= form_for @user do |f| %>
 <form>
 
@@ -41,6 +42,9 @@
 
 </form>
 	<% end %>
-
+				<!-- this col-md-1 gives the singup form a right margin-->
 <div class="col-md-1">
 </div>
+
+
+</body>

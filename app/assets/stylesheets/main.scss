@@ -1,5 +1,15 @@
+.intro {
+	color: white;
+}
+
 body {
 	background: #D3D3D3;
+}
+							// background image only on signup page
+body.bg {
+	background-image: image-url("wits.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 
 .text-right {      // <-- ** MOVES NAV LINKS TO RIGHT
