@@ -23,7 +23,7 @@
 
 	<div class="col-md-2 signupHolder">
 		<div class="form-group">
-
+			<h1 class="text-center">Signup</h1>
 			<strong>First Name: </strong>
 			 <%= f.text_field :first_name, class: "form-control", placeholder: "Enter first name" %><br>
 			<strong>Last Name: </strong>
@@ -35,7 +35,7 @@
 			<strong>Password: </strong>
 			 <%= f.password_field :password, class: "form-control", placeholder: "Password" %><br>
 			<strong>Confirm password: </strong>
-			 <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm password" %><br>
+			 <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm password" %>
 			</div>
 				<%= f.submit "Signup", class: "btn btn-primary" %>
 	</div>
