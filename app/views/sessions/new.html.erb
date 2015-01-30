@@ -1,9 +1,20 @@
 
 <body class="bgl">
-<div class="col-md-5">
+<div class="col-md-2">
 </div>
 
-
+<div class="col-md-7">
+	<div class="text-left">
+		<div class="intro">
+			<h2>Welcome to Go Skate</h2>
+				<strong>
+				<p>A place where you can post content of your skate sessions with your friends</p>
+				<p>Upload photos and videos of your daily sessions</p>
+				<p>Find out where your friends are skating</p>
+				</strong>
+		</div>
+	</div>
+</div>
 
 <%= form_for :user do |f| %>
 	<form>
@@ -21,12 +32,12 @@
 			</div>
 				<%= f.submit "Log In", class: "btn btn-primary" %>
 		</div>
-		
+
 	</form>
 <% end %>
 </div>
 
-<div class="col-md-5">
+<div class="col-md-1">
 </div>
 
 </body>
