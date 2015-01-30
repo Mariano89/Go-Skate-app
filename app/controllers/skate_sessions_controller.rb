@@ -12,8 +12,8 @@ class SkateSessionsController < ApplicationController
 
  	def show
  		@skate_session = SkateSession.find(params[:id])
- 		@photo = @skate_session.photos.new
- 		@video = @skate_session.videos.new
+ 		@photo = Photo.new
+ 		@video = Video.new
 	end
 
 	def new

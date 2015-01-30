@@ -58,7 +58,6 @@
 			<!-- **** SHOW UPLOADED CONTENT AREA **** -->
 
 	<div class="row">
-
 		<% @skate_session.photos.each do |p| %>
 			<div class="col-md-3"> <a href="/skate_sessions/:skate_session_id/photos/:id"> <%= image_tag p.photo.url(:medium) %> </a>
 			<br> 
@@ -70,9 +69,9 @@
 		<% @skate_session.videos.each do |x| %>
 			<div class="col-md-3">  
 			<!-- Posted by: -->
-			<%= video_tag x.video.url :controls => true %>
-			<br>
-			 <%= x.caption %>
+				<%= video_tag x.video.url, :controls => true %>
+				<br>
+			  <%= x.caption %>
 			</div>
 
 		<% end %>
