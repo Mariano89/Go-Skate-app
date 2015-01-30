@@ -1,6 +1,6 @@
-.intro {
-	color: white;
-}
+// .intro {
+// 	color: white;
+// }
 
 .navTitle {
 	color: white;
@@ -10,10 +10,14 @@ body {
 	background: #D3D3D3;
 }
 							// background image only on signup page
-body.bg {
+body.bgs {
 	background-image: image-url("wits.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
+}
+
+body.bgl {
+	background-color: black;
 }
 
 .text-right {      // <-- ** MOVES NAV LINKS TO RIGHT
@@ -37,6 +41,14 @@ body.bg {
 	width: 230px;
 	height: 560px;
 	background-color: #D3D3D3;
+	opacity: 0.9;
+	border-radius: 20px;
+}
+
+.loginHolder {
+	background-color: #D3D3D3;
+	width: 230px;
+	height: 310px;
 	opacity: 0.9;
 	border-radius: 20px;
 }

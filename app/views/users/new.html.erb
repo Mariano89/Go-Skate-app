@@ -2,46 +2,47 @@
 <!-- 
 <h1 class="text-center"> Sign up </h1>
 <hr> -->
-<body class="bg">
+<body class="bgs">
 	<div class="col-md-2">
 	</div>
 
 <div class="col-md-7">
-	<div class="text-left">
-		<div class="intro">
+	<!-- <div class="text-left"> -->
+		<!-- <div class="intro"> -->
 			<!-- <h2>Welcome to Go Skate</h2>
 				<strong>
 				<p>A place where you can post content of your skate sessions with your friends</p>
 				<p>Upload photos and videos of your daily sessions</p>
 				<p>Find out where your friends are skating</p>
 				</strong> -->
-		</div>
-	</div>
+		<!-- </div> -->
+	<!-- </div> -->
 </div>
+
 <%= form_for @user do |f| %>
-<form>
+	<form>
 
-	<div class="col-md-2 signupHolder">
-		<div class="form-group">
-			<h1 class="text-center">Sign Up</h1>
-			<strong>First Name: </strong>
-			 <%= f.text_field :first_name, class: "form-control", placeholder: "Enter first name" %><br>
-			<strong>Last Name: </strong>
-			 <%= f.text_field :last_name, class: "form-control", placeholder: "Enter last name" %><br>
-			 	<strong>Username: </strong>
-			 <%= f.text_field :username, class: "form-control", placeholder: "Enter username" %><br>
-			<strong>Email: </strong>
-			 <%= f.text_field :email, class: "form-control", placeholder: "E-mail" %><br>
-			<strong>Password: </strong>
-			 <%= f.password_field :password, class: "form-control", placeholder: "Password" %><br>
-			<strong>Confirm password: </strong>
-			 <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm password" %>
-			</div>
-				<%= f.submit "Sign Up", class: "btn btn-primary" %>
-	</div>
+		<div class="col-md-2 signupHolder">
+			<div class="form-group">
+				<h1 class="text-center">Sign Up</h1>
+				<strong>First Name: </strong>
+				 <%= f.text_field :first_name, class: "form-control", placeholder: "Enter first name" %><br>
+				<strong>Last Name: </strong>
+				 <%= f.text_field :last_name, class: "form-control", placeholder: "Enter last name" %><br>
+				 	<strong>Username: </strong>
+				 <%= f.text_field :username, class: "form-control", placeholder: "Enter username" %><br>
+				<strong>Email: </strong>
+				 <%= f.text_field :email, class: "form-control", placeholder: "E-mail" %><br>
+				<strong>Password: </strong>
+				 <%= f.password_field :password, class: "form-control", placeholder: "Password" %><br>
+				<strong>Confirm password: </strong>
+				 <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm password" %>
+				</div>
+					<%= f.submit "Sign Up", class: "btn btn-primary" %>
+		</div>
 
-</form>
-	<% end %>
+	</form>
+<% end %>
 				<!-- this col-md-1 gives the singup form a right margin-->
 <div class="col-md-1">
 </div>

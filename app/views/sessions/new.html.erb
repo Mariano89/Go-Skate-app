@@ -1,27 +1,32 @@
-<h1 class="text-center">Log In</h1>
-<hr>
 
+<body class="bgl">
 <div class="col-md-5">
 </div>
+
+
 
 <%= form_for :user do |f| %>
-<form>
-	<div class="col-md-2">
-		<div class="form-group">
-		<strong>Email: </strong>
-			<%= f.text_field :email, class: "form-control", placeholder: "Enter email" %><br>
-			
-			<strong>Password: </strong> 
-			<%= f.password_field :password, class: "form-control", placeholder: "Password" %><br>
+	<form>
 
-			<%= link_to 'forgot password?', "/"%>
+		<div class="col-md-2 loginHolder">
+			<div class="form-group">
+				<h1 class="text-center">Log In</h1>
+				<strong>Email: </strong>
+				<%= f.text_field :email, class: "form-control", placeholder: "Enter email" %><br>
+				
+				<strong>Password: </strong> 
+				<%= f.password_field :password, class: "form-control", placeholder: "Password" %><br>
 
+				<%= link_to 'forgot password?', "/"%>
+			</div>
+				<%= f.submit "Log In", class: "btn btn-primary" %>
 		</div>
-			<%= f.submit "Log In", class: "btn btn-primary" %>
-	</div>
-</form>
+		
+	</form>
 <% end %>
+</div>
 
 <div class="col-md-5">
 </div>
 
+</body>
