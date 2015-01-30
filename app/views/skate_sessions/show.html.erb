@@ -10,14 +10,15 @@
 
 <div class="lt-sidebar">
 
-<div class="row">
-	<div class="col-md-2">
+<div class="row intro">
+	<div class="col-md-2 uploadContent">
 		<div class="borderRT">
 			<div class="form-group">
 
 					<!-- ** UPLOAD PHOTOS ** -->
 
 				<%= form_for [@skate_session, @photo] do |f| %>
+					<form>
 					<%= f.label :photo, "Upload photo here" %>
 					<br>
 					<%= f.file_field :photo, class: "form-control" %>
@@ -49,6 +50,7 @@
 					<br>
 					<%= v.submit "Submit", class: "btn btn-primary" %>
 
+					</form>
 				<% end %>
 
 			</div>

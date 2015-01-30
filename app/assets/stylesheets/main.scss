@@ -28,10 +28,10 @@ body.bgl {
 	margin-left: 10px;
 }
 
-.borderRT {
-	height: 700px;
-	border-right: 1px solid white;
-}
+// .borderRT {
+// 	height: 700px;
+// 	border-right: 1px solid white;
+// }
 
 .btn {
 	margin-left: 70px;
@@ -49,6 +49,14 @@ body.bgl {
 	background-color: #D3D3D3;
 	width: 230px;
 	height: 310px;
+	opacity: 0.9;
+	border-radius: 20px;
+}
+
+.uploadContent {
+	background-color: black;
+	width: 230px;
+	height: 505px;
 	opacity: 0.9;
 	border-radius: 20px;
 }
