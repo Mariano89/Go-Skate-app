@@ -12,7 +12,7 @@
   <body>
          <!--  **** NAVBAR ***  -->
     <nav class="navbar navbar-inverse">
-    <h3 class="col-md-2 navTitle">GoSkate</h3>
+    <h3 class="col-sm-2 navTitle">GoSkate</h3>
     <% if current_user %>  
       <strong>
        <h4 class="navbar-text">
@@ -20,11 +20,9 @@
        </h4>
       </strong>  <!-- wtf? if comment out, sessions nav goes bold -->
       <div class="text-right">
-       
         <%= link_to('Home', user_path(current_user.id), class: "btn btn-default navbar-btn") %> 
          
         <%= link_to('Logout', logout_path, class: "btn btn-default navbar-btn") %> 
-
     </div>
 
     <% else %>

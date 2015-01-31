@@ -1,4 +1,4 @@
-.intro {
+.whiteText {
 	color: white;
 }
 
@@ -9,7 +9,7 @@
 body {
 	background: #D3D3D3;
 }
-							// background image only on signup page
+		// background image only on signup page
 body.bgs {
 	background-image: image-url("wits.jpg");
 	background-repeat: no-repeat;
@@ -17,7 +17,9 @@ body.bgs {
 }
 
 body.bgl {
-	background-color: black;
+	background-image: image-url("go-skateboarding.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 
 .text-right {      // <-- ** MOVES NAV LINKS TO RIGHT
@@ -38,9 +40,9 @@ body.bgl {
 }
 
 .signupHolder {
+		background-color: #D3D3D3;
 	width: 230px;
 	height: 560px;
-	background-color: #D3D3D3;
 	opacity: 0.9;
 	border-radius: 20px;
 }
@@ -57,8 +59,12 @@ body.bgl {
 	background-color: black;
 	width: 230px;
 	height: 505px;
-	opacity: 0.9;
+	// opacity: 0.9;
 	border-radius: 20px;
+}
+
+.navButtons {
+	margin-left: 0px;
 }
 
 .col-md-3 {
