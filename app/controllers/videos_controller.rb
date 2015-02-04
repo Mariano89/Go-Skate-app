@@ -23,7 +23,7 @@ class VideosController < ApplicationController
 			render :new
 		end
 	end
-
+      
   # def set_success(format, opts)
   #   self.success = true
   # end
