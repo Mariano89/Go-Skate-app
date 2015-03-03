@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   	resources :photos
   	resources :videos
   end
+  
   resources :users
 
 end

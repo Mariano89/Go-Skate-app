@@ -61,7 +61,10 @@
 
 	<div class="row">
 		<% @skate_session.photos.each do |p| %>
-			<div class="col-md-3"> <a href="/skate_sessions/:skate_session_id/photos/:id"> <%= image_tag p.photo.url(:medium) %> </a>
+			<div class="col-md-3"> 
+			<a href='/skate_sessions/:skate_session_id/photos/:id/edit(p)'>
+			 <%= image_tag p.photo %> 
+			 </a>
 			<br> 
 			 <%= p.caption %>
 			</div>
