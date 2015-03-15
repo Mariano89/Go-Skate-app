@@ -1,1 +1,3 @@
 GoSkate is a social media app for skateboarders to post content from their daily sessions.
+
+Built with Ruby on Rails
